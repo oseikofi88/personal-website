@@ -1,0 +1,33 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore node modules (if using npm for dependencies)
+node_modules/
+
+# Ignore dependency management files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Ignore build and deployment directories
+dist/
+build/
+
+# Ignore temporary files
+*.log
+*.tmp
+*.bak
+
+# Ignore IDE/editor files
+.vscode/
+.idea/
+*.swp
+
+# Ignore compiled or generated files
+*.min.css
+*.min.js
+*.map
+
+# Ignore vendor folder if dependencies are managed via package managers
+# vendor/
