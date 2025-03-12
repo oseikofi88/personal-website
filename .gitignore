@@ -25,9 +25,9 @@ build/
 *.swp
 
 # Ignore compiled or generated files
-*.min.css
-*.min.js
-*.map
+# *.min.css
+# *.min.js
+# *.map
 
 # Ignore vendor folder if dependencies are managed via package managers
 # vendor/

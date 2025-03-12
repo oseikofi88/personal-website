@@ -28,17 +28,28 @@
   "dependencies": {
     "bootstrap": "^4.0.0-beta.2",
     "devicons": "^1.8.0",
+    "gulp": "^5.0.0",
     "jquery": "^3.2.1",
+    "parcel": "^2.13.3",
     "popper.js": "^1.12.6",
     "simple-line-icons": "^2.4.1"
   },
   "devDependencies": {
     "browser-sync": "2.18.13",
-    "gulp": "^3.9.1",
     "gulp-clean-css": "3.9.0",
     "gulp-header": "1.8.9",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-uglify": "3.0.0"
+    "gulp-sass": "^6.0.1",
+    "gulp-uglify": "3.0.0",
+    "sass": "^1.85.1",
+    "svgo": "^3.3.2"
+  },
+  "scripts": {
+    "build": "parcel build index.html"
+  },
+  "source": "index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "alias": {
+    "jquery.easing": "./vendor/jquery-easing/jquery.easing.min.js"
   }
 }
