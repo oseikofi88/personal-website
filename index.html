@@ -62,13 +62,17 @@
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#projects">Pet/Hobby Projects</a>
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#security-findings">Some Security Findings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#conference-talks">Conference Talk</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#education">Education</a>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#conference-talks">Conference Talk</a>
-        </li>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
         </li>
@@ -360,33 +364,74 @@
       </div>
     </section>
 
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="security-findings">
       <div class="my-auto">
-        <h2 class="mb-5">Education</h2>
+        <h2 class="mb-5">Some Security Findings</h2>
+        <p>
+          In 2017, I found out that
+          Lead for building
+          <a href="https://omgvoice.com/" target="_blank">
+            OMGVoice's website
+          </a>
+          website was vulnerable to XSS.<br> They redesigned the
+          site
+          shortly after I informed them and the new one doesn't have
+          such vulnerability.
+        </p>
+        <br>
+        <p>
+          In 2022, I discovered two security vulnerabilities on
+          <a href="https://online.dvla.gov.gh/" target="_blank">
+            DVLA, i.e., the Driver and Vehicle License Authority in
+            Ghana's official site.
+          </a>
+          <br>
+          The site used users' phone numbers as usernames and passwords for users who did not change their default
+          password after the first time logging in, which is probably 99% of users. <br>
+          This was a big concern, as once entered, you aren't forced to reset your password; hence, you could access
+          anyone's account if you know their phone number (both at the UI and API level). <br>
+          The problem this poses is that a bad actor can write a script to randomly generate giant records of phone
+          numbers and then use the API to authenticate the generated phone numbers.<br>
+          If authentication is successful for a phone number, the person can then obtain other PII such as DOBs, emails,
+          identification card details, etc.<br>
 
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0">Kwame Nkrumah University Of Science And Technology (KNUST)</h3>
-            <div class="subheading mb-3">Bachelor of Science</div>
-            <div>Computer Engineering</div>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">September 2013 - June 2017</span>
-          </div>
-        </div>
+          <br>
+          The second vulnerability was excessive information exposure.
+          The site also had information such as fingerprint information (that is the format that fingerprint information
+          is stored in) exposed on the API but not displayed on the UI.<br>
+          This also poses a significant security problem.
+          <br>
+          I informed DVLA of my findings, and they have since implemented an OTP that is sent to the user's phone for
+          confirmation as part of the authentication process for the first problem.
+          <br>
+          They have taken out the fingerprint information that was returned in the API response.
 
-        <div class="resume-item d-flex flex-column flex-md-row">
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0">St Peters Senior High School</h3>
-            <div class="subheading mb-3">General Science</div>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">September 2010 - April 2013</span>
-          </div>
-        </div>
+          <br>
+          <br>
+          There are other vulnerabilities I have found in other applications in Fintech apps and even Telecom
+          applications.
+          <br>Unfortunately I can't post them here as they still exist and can be exploited.
+          <br> If they are resolved, I will post them here.
+
+          <br>
+          But the key takeway is that <b>please take application security very serious.</b>
+          <br>
+
+
+
+
+
+
+
+
+
+        </p>
 
       </div>
     </section>
+
+
+
 
     <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="conference-talks">
       <div class="my-auto">
@@ -422,6 +467,34 @@
         </ul>
       </div>
     </section>
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
+      <div class="my-auto">
+        <h2 class="mb-5">Education</h2>
+
+        <div class="resume-item d-flex flex-column flex-md-row mb-5">
+          <div class="resume-content mr-auto">
+            <h3 class="mb-0">Kwame Nkrumah University Of Science And Technology (KNUST)</h3>
+            <div class="subheading mb-3">Bachelor of Science</div>
+            <div>Computer Engineering</div>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">September 2013 - June 2017</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row">
+          <div class="resume-content mr-auto">
+            <h3 class="mb-0">St Peters Senior High School</h3>
+            <div class="subheading mb-3">General Science</div>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">September 2010 - April 2013</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
       <div class="my-auto">
         <h2 class="mb-5">Interests</h2>
